@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-image: url('https://i.pinimg.com/originals/2d/7a/4a/2d7a4a2d973b4e999a6eaab313883840.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        form {
+            background: black;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label,
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Login Form</h1>
+
+    <form id="loginForm" onsubmit="return validate()">
+        <label for="name">Pura naam bata:</label>
+        <input type="text" id="name" name="name" placeholder="Khudka naam">
+        <div id="nameError" class="error"></div>
+
+        <label for="password">Password bata:</label>
+        <input type="password" id="password" name="password" placeholder="Likh password">
+        <div id="passwordError" class="error"></div>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="showPassword" onclick="togglePassword()">
+            <label for="showPassword">Password dekhna hai toh daba</label>
+        </div>
+
+        <button type="submit">Le login kar</button>
+    </form>
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>
