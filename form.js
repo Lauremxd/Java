@@ -32,7 +32,7 @@ function validate() {
     }
 
     if (isValid) {
-        alert("Login pura hogaya!!");
+        alert("Login pura ho gaya hai!");
         document.getElementById("loginForm").reset();
     }
 
